@@ -1,6 +1,5 @@
 package org.sid.cinema.entities;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;

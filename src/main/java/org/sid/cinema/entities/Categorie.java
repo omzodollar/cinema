@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +23,7 @@ public class Categorie {
 	private Long id;
 	@Column(length=75)
 	private String name;
-	@OneToMany
-	private Collection <Film> films;
+	@OneToMany(mappedBy="categorie")
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	private Collection<Film> films;
 }

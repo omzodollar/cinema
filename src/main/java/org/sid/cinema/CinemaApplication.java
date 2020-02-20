@@ -18,8 +18,9 @@ public class CinemaApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		cinemaInitService.initVilles();
 		cinemaInitService.initCinemas();
-		cinemaInitService.initPlaces();
 		cinemaInitService.initSalles();
+		cinemaInitService.initPlaces();
+		cinemaInitService.initSeances();
 		cinemaInitService.initCategories();
 		cinemaInitService.initFilms();
 		cinemaInitService.initPlaces();
